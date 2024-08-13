@@ -19,5 +19,5 @@
   <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white"/> <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/> <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/> 
   
 - 핵심 아이디어 : 지하철 객실내 CCTV로 부터 받아온 이미지 데이터를 컴퓨터 비전을 활용하여 분석, 실시간으로 혼잡도를 알려주는 서비스
+- 2024년 부산광역시 공공/빅데이터 활용 창업경진대회 아이디어 부문 참가, 부산교통공사 공공데이터 활용
 
-## 데이터베이스
