@@ -25,7 +25,7 @@
 <br>
 
 ### 2. 팀구성 및 개발환경
-  * 팀구성
+  * ### 팀구성
     ---
     #### Back-end
     장민우(본인)
@@ -35,7 +35,7 @@
     김정원<a href="https://github.com/DevInGarden">(GITHUB LINK)</a><br>
     > 화면 레이아웃 설계, 페이지별 컴포넌트 제작
     
-  * 개발환경
+  * ### 개발환경
     ---
     - Back-end
       > <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" />
