@@ -24,37 +24,33 @@
 <br>
 
 ### 2. 팀구성 및 개발환경
-<table>
- <tr>
-  <td width="450">
-   <h4>팀구성</h4><hr>
-   <h4>Back-end</h4>
-   <p>
-    장민우(본인)<br>
-     - 데이터베이스설계, REST API 구축, 비즈니스 로직 구현
-   </p>   
-   <h4>Front-end</h4>
-   <p>
+  * 팀구성
+    ---
+    #### Back-end
+    장민우(본인)
+    > 데이터베이스 설계, REST API 구축, 비즈니스 로직 구현
+
+    #### Front-end
     김정원<a href="https://github.com/DevInGarden">(GITHUB LINK)</a><br>
-     - 화면 레이아웃 설계, 페이지별 컴포넌트 제작  
-   </p>
-  </td>
-  <td width="500">
-   <h4>개발환경</h4><hr>
-     <h4>Back-end</h4>
-     <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" height="34" />
-     <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" />
-     <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" /><br>
-     <h4>Front-end</h4>
-     <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" height="34" />
-     <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
-     <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
-     <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" /><br>
-  </td>
- </tr>
-</table>
+    > 화면 레이아웃 설계, 페이지별 컴포넌트 제작
+    
+  * 개발환경
+    ---
+    - Back-end
+      > <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" />
+      > <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" />
+      > <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" />
+
+      
+    - Front-end
+      > <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" />
+      > <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
+      > <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
+      > <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" /><br>
 
 <br>
+
+
 
 
                 
