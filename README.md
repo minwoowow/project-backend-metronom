@@ -95,4 +95,37 @@
 ![erd_desc](https://github.com/user-attachments/assets/99f962b8-f25a-40e9-aec4-86f47e94b125)
 
 ### 7. 최단 경로 알고리즘 구현(Dijkstra Algorithm)
+![route_map](https://github.com/user-attachments/assets/e6e2f99b-bffe-4366-9ead-5a61aec1c307)
+
+- 호선별로 각 역들을 연결, 각 호선별 환승역 끼리 연결하여 그래프 완성
+  - 1호선(40), 2호선(43), 3호선(17), 4호선(14)
+  - 괄호안은 node(역) 개수, 각 node를 연결하는 edge는 시간(second) 가중치를 줌
+  - 시간 가중치는 부산교통공사 공공데이터에 있는 역간 거리를(km)를 지하철 평균 시속으로 나눠서 초단위로 설정
+  - 환승역 이동 간선 포함(ex. 서면(1) -> 서면(2))
+  - 환승역 이동시간은 [부산교통공사 홈페이지 내용](https://www.humetro.busan.kr/homepage/cyberstation/map.do) 참조
+- 2차원 arrayList와 Node로 그래프 구현
+  ```java
+  public class ShortestPath {
+	 ...
+  private ArrayList<ArrayList<Node>> graph;
+
+  static class Node {		// 다음 노드의 index와 그 노드로 가는데 필요한 cost(가중치)
+	 	int dest;  // 다음 노드 index
+		 int cost;  // 가중치
+		...
+  ```
+- PriorityQueue를 사용하여 가중치를 기준으로 오름차순화한다 => 가장 낮은 cost 부터 Deque
+- Queue에서 poll한 노드의 index에 해당하는 cost와 현재기록되어있는 dist배열의 index의 cost와 비교하여 방문처리
+		현재 꺼낸 노드의 가중치가 dist의 가중치보다 크다면 해당 노드는 이전에 방문된 노드임
+  boolean visited[] 대신 사용
+- 출발역과 도착역의 id를 입력받으면 Arrival Repository를 통해 다음의 쿼리문을 실행 후 최단경로에 대한 정보를 response 함
+  ```sql
+  SELECT station_name, arrival_time
+  FROM station S, arrival A
+  WHERE A.train_id = (
+	 SELECT A.train_id FROM arrival A, train T WHERE A.station_id = 115
+     AND end_station_id = 134 AND A.train_id = T.train_id
+     AND arrival_time > curtime() ORDER BY arrival_time ASC LIMIT 1)
+  AND A.station_id IN (115, 119) AND A.station_id = S.station_id;
+  ```
 
