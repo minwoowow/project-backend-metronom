@@ -10,7 +10,11 @@
 
 ## 목차
  1. [프로젝트 소개](#1-프로젝트-소개)
- 2. [팀구성 및 개발환경](#2-팀구성-및-개발환경)
+ 2. [팀구성 및 개발환경](#2-팀구성-및-기술스택)
+ 3. [구현 기능](#3-구현-기능)
+ 4. [화면 설계서](#4-화면-설계서)
+ 5. [REST API 명세](#5-rest-api-명세)
+ 6. [ERD 명세](#6-erd-명세)
 <br>
 
 ### 1. 프로젝트 소개
@@ -43,7 +47,7 @@
       > <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" /><br>      
 <br>
 
-### 3. 구현 기능 및 내용
+### 3. 구현 기능
  - **출발역 및 도착역 선택** : 사용자 인터페이스를 통해 출발역과 도착역을 한 화면에서 쉽게 선택할 수 있게 구성
  - **실시간 열차 정보** : 선택한 역의 곧 도착예정인 열차의 객실 내 CCTV 이미지 데이터를 전송받아 객실별 혼잡도를 시각화
  - **소요시간 및 경로정보** : 선택된 출발역과 도착역 간의 실시간 소요시간과 경로 정보를 제공(Dijkstra Algorithm 활용)
@@ -88,3 +92,7 @@
 <br>
 
 ### 6. ERD 명세
+![erd_desc](https://github.com/user-attachments/assets/99f962b8-f25a-40e9-aec4-86f47e94b125)
+
+### 7. 최단 경로 알고리즘 구현(Dijkstra Algorithm)
+
