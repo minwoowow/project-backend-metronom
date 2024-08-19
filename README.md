@@ -37,7 +37,7 @@
       > <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" />
 
     - #### Front-end
-      > **김정원**<a href="https://github.com/DevInGarden">(GITHUB Link)</a>  
+      > **김정원**<a href="https://github.com/DevInGarden/K-Digital-MiniProject">(GITHUB Link)</a>  
       > 역할 : 화면 레이아웃 설계, 페이지별 컴포넌트 제작
       
       > *기술스택*  
