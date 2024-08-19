@@ -3,9 +3,9 @@
 > 수강중 진행한 프로젝트
 <br>
 
-### [시연영상](https://www.youtube.com/watch?v=eH851DO0fqw)
+## [시연영상](https://www.youtube.com/watch?v=eH851DO0fqw){: target="_blank"}
 
-<a href="https://www.youtube.com/watch?v=eH851DO0fqw"><img src="https://github.com/user-attachments/assets/6e4bbf2c-da49-44c6-adde-a4bb4636a216" /></a>
+<a href="https://www.youtube.com/watch?v=eH851DO0fqw" target="_blank"><img src="https://github.com/user-attachments/assets/6e4bbf2c-da49-44c6-adde-a4bb4636a216" /></a>
 
 <br>
 
