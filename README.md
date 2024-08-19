@@ -15,6 +15,7 @@
  4. [화면 설계서](#4-화면-설계서)
  5. [REST API 명세](#5-rest-api-명세)
  6. [ERD 명세](#6-erd-명세)
+ 7. [
 <br>
 
 ### 1. 프로젝트 소개
@@ -103,7 +104,7 @@
   - 시간 가중치는 부산교통공사 공공데이터에 있는 역간 거리를(km)를 지하철 평균 시속으로 나눠서 초단위로 설정
   - 환승역 이동 간선 포함(ex. 서면(1) -> 서면(2))
   - 환승역 이동시간은 [부산교통공사 홈페이지 내용](https://www.humetro.busan.kr/homepage/cyberstation/map.do) 참조
-- 2차원 arrayList와 Node로 그래프 구현
+- 2차원 ArrayList와 Node로 그래프 구현
   ```java
   public class ShortestPath {
 	 ...
@@ -111,7 +112,7 @@
 
   static class Node {		// 다음 노드의 index와 그 노드로 가는데 필요한 cost(가중치)
 	 	int dest;  // 다음 노드 index
-		 int cost;  // 가중치
+		int cost;  // 가중치
 		...
   ```
 - PriorityQueue를 사용하여 가중치를 기준으로 오름차순화한다 => 가장 낮은 cost 부터 Deque
@@ -128,4 +129,8 @@
      AND arrival_time > curtime() ORDER BY arrival_time ASC LIMIT 1)
   AND A.station_id IN (115, 119) AND A.station_id = S.station_id;
   ```
+<br>
+
+- #### 비교영상
+
 
