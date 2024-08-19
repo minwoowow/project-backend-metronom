@@ -3,19 +3,21 @@
 > 수강중 진행한 프로젝트
 <br>
 
+# [시연영상](https://www.youtube.com/watch?v=eH851DO0fqw)
+
 ![metronom_index_page](https://github.com/user-attachments/assets/6e4bbf2c-da49-44c6-adde-a4bb4636a216)
 
-[시연영상](https://www.youtube.com/watch?v=eH851DO0fqw)
 <br>
 
 ## 목차
  1. [프로젝트 소개](#1-프로젝트-소개)
- 2. [팀구성 및 개발환경](#2-팀구성-및-기술스택)
+ 2. [팀구성 및 기술스택](#2-팀구성-및-기술스택)
  3. [구현 기능](#3-구현-기능)
  4. [화면 설계서](#4-화면-설계서)
  5. [REST API 명세](#5-rest-api-명세)
  6. [ERD 명세](#6-erd-명세)
- 7. [
+ 7. [최단경로 탐색 알고리즘 구현(Dijkstra Algorithm)](#7-최단경로-탐색-알고리즘-구현dijkstra-algorithm)
+ 8. [프로젝트 회고](#8-프로젝트-회고)
 <br>
 
 ### 1. 프로젝트 소개
@@ -94,8 +96,9 @@
 
 ### 6. ERD 명세
 ![erd_desc](https://github.com/user-attachments/assets/99f962b8-f25a-40e9-aec4-86f47e94b125)
+<br>
 
-### 7. 최단 경로 알고리즘 구현(Dijkstra Algorithm)
+### 7. 최단경로 탐색 알고리즘 구현(Dijkstra Algorithm)
 ![route_map](https://github.com/user-attachments/assets/e6e2f99b-bffe-4366-9ead-5a61aec1c307)
 
 - 호선별로 각 역들을 연결, 각 호선별 환승역 끼리 연결하여 그래프 완성
@@ -115,6 +118,7 @@
 		int cost;  // 가중치
 		...
   ```
+  <br>
 - PriorityQueue를 사용하여 가중치를 기준으로 오름차순화한다 => 가장 낮은 cost 부터 Deque
 - Queue에서 poll한 노드의 index에 해당하는 cost와 현재기록되어있는 dist배열의 index의 cost와 비교하여 방문처리
 		현재 꺼낸 노드의 가중치가 dist의 가중치보다 크다면 해당 노드는 이전에 방문된 노드임
@@ -131,6 +135,75 @@
   ```
 <br>
 
-- #### 비교영상
+- 최단경로 탐색 구현 정확도 확인을 위한 비교영상
 
+<div align="center">
+	
+<h2 align="left">　　　　　🚃 Metronom</h2>
 
+![metronom_clip-ezgif com-speed](https://github.com/user-attachments/assets/04a683b5-27dd-4b83-9273-c54d6e12881c)
+
+<h2 align="left">　　　　　🚋 Humetro<a href="https://www.humetro.busan.kr/homepage/cyberstation/map.do">(부산교통공사제공 노선검색 서비스)</a></h2>
+
+![humetro_clip-ezgif com-speed](https://github.com/user-attachments/assets/236bce85-8742-46e3-96a6-34e85065fd75)
+
+<h2 align="left">　　　　　🎯 Result</h2>
+
+| Metronom | Humetro |
+| :------: | :-----: |
+| ![image](https://github.com/user-attachments/assets/aae5093d-42c1-4e5f-afad-31b9cee9d9d0) | ![image](https://github.com/user-attachments/assets/3ef30f8f-26ef-4f68-b2fb-117651254a18) |
+<br>
+</div>
+
+- Reference
+	- [[Youtube] "Java 다익스트라(dijkstra)", ezsx](https://www.youtube.com/watch?v=QleeV_ipB7w&t=1036s)
+	- [[Tistory] "다익스트라 알고리즘(Dijkstra Algorithm)", sskl660](https://sskl660.tistory.com/59)
+	- [[Tistory] "다익스트라(Dijkstra) 알고리즘을 Java로 구현해보자!", coding-knowjam](https://codingnojam.tistory.com/46)
+<br>
+
+### 8. 프로젝트 회고
+	
+- 배운점
+  - 최단경로 탐색 알고리즘 구현  
+    유튜브나 블로그 등을 통해 dijkstra에 대해 공부하고 프로젝트에 맞게 적용시켜보면서<br>
+		그래프 이론에 대한 이해를 깊게 할 수 있었고 List, Map, PriorityQueue 등의 클래스를<br>
+		사용하는 방법론에 대해서도 많이 익힐 수 있었다.
+  - query 로직에 대한 이해도 향상  
+    현재시간 보다 높은(지난) 시간 데이터를 찾기 위해 arrival_time > curtime()을 쓰고<br>
+		해당하는	시간 데이터를 가지고 있는 train_id를 찾고 그 train_id가 도착하는 station_id를<br>
+		또 찾아야되고...	이런 문제들을 MySQL에서 반복해서 만지다보니 결과값을 도출하기 위한<br>
+		최적의 query 로직을 설계하는것에 대해 감을 잡을 수 있었다.  
+  - CSV 데이터 가공 프로그래밍(java)  
+    공공데이터 포탈에서 받은 데이터들을 전처리 후 DB에 넣어야 했는데 과도하게 많은 양이라서<br>
+		수작업을	할 순 없었고(할 순 있지만 시간이 없었고) 구글링을 통해 java에서 csv파일을<br>
+		읽어들여 입맛에 맞게 가공할	수 있는 방법을 찾아 편리하게 데이터 전처리를 할 수 있었다.  
+
+- 아쉬운점
+  - 실제 데이터(CCTV 이미지) 부재  
+    처음 공모전에 출품할 생각으로 프로젝트를 구상했었는데 부산교통공사에서 CCTV 데이터를<br>
+		반출할 수 없다는 입장을 들었다. 그래서 공모전에는 아이디어 부문으로 참가를 하여 아이디어<br>
+		계획서만 제출하였고 실제 프로젝트에는 dummy data를 사용하여 구현을 했는데 이부분이<br>
+		너무 아쉬웠고 컴퓨터 비전은 따로 공부를 하여 이미지 분석 관련한 프로젝트를 실행해 볼<br>
+		계획이다.  
+  - Spring-Security  
+    프로젝트를 계획할 당시 로그인 기능은 굳이 필요없을 것 같아서 포함을 안했었는데 프로젝트<br>
+		후반쯤 그래도 배운거 써먹어보자 라는 생각으로 로그인, 회원가입 등의 기능을 만들고 JWT<br>
+		토큰방식 인증까지 구현을 했었다. 하지만 로그인 후 그에 따르는 부가적인 기능들(마이페이지,<br>
+		게시판, 서비스 평가 페이지 등) 까지 구현하기에는 프로젝트 마감시간이 촉박했고 결국<br>
+		프로젝트 발표때는 로그인 기능을 제외했었다. 개인적으로 멤버쉽 게시판 서비스 프로젝트를<br>
+		만들어서 security를 사용한 로그인 및 부가적인 기능까지 완벽하게 구현해볼 계획이다.  
+  - 프로젝트 과정 기록의 부재  
+    프로젝트를 진행하며 마주친 여러가지 에러들이 많았고 무수한 디버깅 과정들이 있었지만<br>
+		시간에 쫓기느라 기능을 구현하는 데에만 집중한 나머지 제대로 트러블슈팅 과정을 기록하지<br>
+		못한게 가장 큰 아쉬운 점이다. 회고를 쓰면서 가장 강하게 느낀점이 그런 트러블슈팅 과정의<br>
+		기록들이야 말로 나의 피가 되고 살이되는 내 성장의 자양분이라는 것을 깨달은 것이다.
+
+- 총평  
+  코딩의 '코'자도 모르는 상태에서 약 4개월간 정말 압축적으로 java, java script, html, css,<br>
+	react 등을 머리속에 욱여넣다 싶이 배운다음에 맞이 한 첫 프로젝트이다. 배운점도 많고 아쉬운점도<br>
+ 	많았으며 정말 어려웠고 너무 재미있는 시간이었다.<br>
+	Front-end와 Back-end가 어떻게 데이터를 주고받는지에 대한 흐름을 이해할 수 있게된 것이 가장<br>
+ 	큰 수확이었고, 흐름을 이해한 후 Front-end를 맡은 팀원과의 소통이 더욱 원활해졌고 더 많은<br>
+	아이디어가 나오고 더 빨리 문제해결을 하는 과정들이 즐거웠다. 아직 배워야하고 경험해야 하는<br>
+ 	부분이 너무 많이 남아있다는 사실이 나를 긴장하게 하고 들뜨게 한다. 다음 프로젝트가 기대된다.  
+  
