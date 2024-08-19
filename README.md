@@ -113,7 +113,7 @@
 	 ...
   private ArrayList<ArrayList<Node>> graph;
 
-  static class Node {		// 다음 노드의 index와 그 노드로 가는데 필요한 cost(가중치)
+  static class Node {	// 다음 노드의 index와 그 노드로 가는데 필요한 cost(가중치)
 	 	int dest;  // 다음 노드 index
 		int cost;  // 가중치
 		...
