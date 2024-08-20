@@ -72,9 +72,10 @@
  
  3. 실시간 혼잡도 정보 화면
     - Font-end : 출발역, 도착역 ID를 담아 API request
-    - Back-end : (1) request 받은 ID를 통해 출발역과 상하행 정보를 판단
-                 (2) 해당역에 가장 먼저 들어올 열차ID를 통해 해당열차의 객실별 CCTV 이미지 데이터를 종합관제실로 부터 받은 후(미구현)
-                 (3) 각 이미지 데이터를 혼잡도예측모델로 분석 후 객실별 혼잡도 값(백분율)을 Response
+    - Back-end :  
+      (1) request 받은 ID를 통해 출발역과 상하행 정보를 판단  
+      (2) 해당역에 가장 먼저 들어올 열차ID를 통해 해당열차의 객실별 CCTV 이미지 데이터를 종합관제실로 부터 받은 후(미구현)  
+      (3) 각 이미지 데이터를 혼잡도예측모델로 분석 후 객실별 혼잡도 값(백분율)을 Response  
     - Front-end : Response 받은 혼잡도 값을 구간별로 색깔 지정하여 시각화
 
  4. 역내 공기질 정보 화면
@@ -103,10 +104,11 @@
 
 - 호선별로 각 역들을 연결, 각 호선별 환승역 끼리 연결하여 그래프 완성
   - 1호선(40), 2호선(43), 3호선(17), 4호선(14)
-  - 괄호안은 node(역) 개수, 각 node를 연결하는 edge는 시간(second) 가중치를 줌
+  - 괄호안은 node(역) 개수, 각 node를 연결하는 edge는 시간(second) 가중치를 부여
   - 시간 가중치는 부산교통공사 공공데이터에 있는 역간 거리를(km)를 지하철 평균 시속으로 나눠서 초단위로 설정
+  - 환승역 총 12개
   - 환승역 이동 간선 포함(ex. 서면(1) -> 서면(2))
-  - 환승역 이동시간은 [부산교통공사 홈페이지 내용](https://www.humetro.busan.kr/homepage/cyberstation/map.do) 참조
+  - 환승역 내 이동시간은 [부산교통공사 홈페이지 내용](https://www.humetro.busan.kr/homepage/cyberstation/map.do) 참조
 - 2차원 ArrayList와 Node로 그래프 구현
   ```java
   public class ShortestPath {
