@@ -62,27 +62,27 @@
 ![Main_Page](https://github.com/user-attachments/assets/a73e2d26-ec56-4b49-916b-f67fde998023)
 
 1. **노선도 화면**
-	- **Client** : 출발역과 도착역을 차례로 클릭하여 해당역의 ID 값을 변수에 저장  
-	- **Front-end** : 아래 각 컴포넌트 자체적으로 fetch 진행  
+	- ${\textsf{\color{red}Client}}$ : 출발역과 도착역을 차례로 클릭하여 해당역의 ID 값을 변수에 저장  
+	- ${\textsf{\color{blue}Front-end}}$ : 아래 각 컴포넌트 자체적으로 fetch 진행  
   
 2. **도착 정보 화면**
-	- **Front-end** : 출발역, 도착역 ID를 담아 API request  
-	- **Back-end** : request로 받은 ID를 바탕으로 Dijkstra 알고리즘 사용하여 최단경로 구한 후 DB에 저장되어 있는 도착시간정보를 response  
+	- ${\textsf{\color{blue}Front-end}}$ : 출발역, 도착역 ID를 담아 API request  
+	- ${\textsf{\color{green}Back-end}}$ : request로 받은 ID를 바탕으로 Dijkstra 알고리즘 사용하여 최단경로 구한 후 DB에 저장되어 있는 도착시간정보를 response  
  
 3. **실시간 혼잡도 정보 화면**
-	- **Font-end** : 출발역, 도착역 ID를 담아 API request  
-	- **Back-end** :
-	  1) request 받은 ID를 통해 출발역과 상하행 정보를 판단
+	- ${\textsf{\color{blue}Front-end}}$ : 출발역, 도착역 ID를 담아 API request  
+	- ${\textsf{\color{green}Back-end}}$ :
+		1) request 받은 ID를 통해 출발역과 상하행 정보를 판단
 		2) 해당역에 가장 먼저 들어올 열차ID를 통해 해당열차의 객실별 CCTV 이미지 데이터를 종합관제실로 부터 받은 후(미구현)
 		3) 각 이미지 데이터를 혼잡도예측모델로 분석 후 객실별 혼잡도 값(백분율)을 response
-	- **Front-end** : response 받은 혼잡도 값을 구간별로 색깔 지정하여 시각화
+	- ${\textsf{\color{blue}Front-end}}$ : response 받은 혼잡도 값을 구간별로 색깔 지정하여 시각화
 
 4. **역내 공기질 정보 화면**
-	- **Front-end** : 출발역 ID를 API형식에 맞는 ID로 변환후 '실내공기질 실시간 측정자료 API'로 fetch한 후 response 값을 출력  
+	- ${\textsf{\color{blue}Front-end}}$ : 출발역 ID를 API형식에 맞는 ID로 변환후 '실내공기질 실시간 측정자료 API'로 fetch한 후 response 값을 출력  
 
 5. **도착역 주변정보 화면**
-	- **Front-end** : 도착역 ID를 담아 API request  
-	- **Back-end** : request로 받은 ID를 바탕으로 도착역의 위, 경도 데이터를 response  
+	- ${\textsf{\color{blue}Front-end}}$ : 도착역 ID를 담아 API request  
+	- ${\textsf{\color{green}Back-end}}$ : request로 받은 ID를 바탕으로 도착역의 위, 경도 데이터를 response  
 <br>
 
 ### 5. REST API 명세
