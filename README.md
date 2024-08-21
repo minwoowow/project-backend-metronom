@@ -189,7 +189,7 @@
 				continue;
 			}
  	```
-- 출발역과 도착역의 id를 입력받으면 `Arrival Repository`를 통해 다음의 쿼리문을 실행 후 최단경로에 대한 정보를 response 함
+- 출발역과 도착역의 id를 입력받으면 Dijkstra 알고리즘을 통해 각 환승역 정보와 함께 최단경로를 구하고 `Arrival Repository`를 통해 다음의 쿼리문을 실행 후 최단경로에 대한 정보를 response
   ```sql
   SELECT station_name, arrival_time
   FROM station S, arrival A
