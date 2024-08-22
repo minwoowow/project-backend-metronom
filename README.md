@@ -20,7 +20,7 @@
  8. [프로젝트 회고](#8-프로젝트-회고)
 <br>
 
-### 1. 프로젝트 소개
+## 1. 프로젝트 소개
 - 프로젝트 이름 : 부산시 지하철 실시간 혼잡도 알림 서비스
 - 개발기간 : 2024.06.01 ~ 2024.06.28
 - 개발목적 : 지하철 객실의 혼잡도를 실시간으로 알려주는 서비스를 제공함으로써 지하철 이용 승객들의 편의성 향상 및 안전성 증대, 그와 더불어 대중교통의 이용증가라는 선순환 형성
@@ -28,7 +28,7 @@
 - **핵심 아이디어 : 지하철 객실내 CCTV로 부터 받아온 이미지 데이터를 컴퓨터 비전을 활용하여 분석, 실시간으로 혼잡도를 알려주는 서비스**
 <br>
 
-### 2. 팀구성 및 기술스택
+## 2. 팀구성 및 기술스택
 - #### 팀명 : Metronom
 - #### Back-end
 > **장민우**(본인)  
@@ -50,7 +50,7 @@
 > ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)
 <br>
 
-### 3. 구현 기능
+## 3. 구현 기능
  - **출발역 및 도착역 선택** : 사용자 인터페이스를 통해 출발역과 도착역을 한 화면에서 쉽게 선택할 수 있게 구성
  - **실시간 열차 정보** : 선택한 역의 곧 도착예정인 열차의 객실 내 CCTV 이미지 데이터를 전송받아 객실별 혼잡도를 시각화
  - **소요시간 및 경로정보** : 선택된 출발역과 도착역 간의 실시간 소요시간과 경로 정보를 제공(Dijkstra Algorithm 활용)
@@ -59,7 +59,7 @@
  - **통합 화면 설계** : 모든 주요기능을 한 화면에서 직관적으로 볼 수 있도록 통합 화면 레이아웃 구성
 <br>
 
-### 4. 화면 설계서
+## 4. 화면 설계서
 ![Main_Page](https://github.com/user-attachments/assets/a73e2d26-ec56-4b49-916b-f67fde998023)
 
 1. **노선도 화면**
@@ -86,7 +86,7 @@
 	- ${\textsf{\color{green}Back-end}}$ : request로 받은 ID를 바탕으로 도착역의 위, 경도 데이터를 response  
 <br>
 
-### 5. REST API 명세
+## 5. REST API 명세
  | Method | URI | Description | 화면 ID |
  | :---: | :---: | :---: | :---: |
  | `GET` | `/getArrivalInfo` | 출발역과 도착역간의 최적경로, 환승정보, 소요시간 정보 제공 | *2* |
@@ -95,11 +95,11 @@
  | `GET` | `/getLocation` | 선택한 역의 위, 경도 정보 제공 | *5* |
 <br>
 
-### 6. ERD 명세
+## 6. ERD 명세
 ![erd_desc](https://github.com/user-attachments/assets/99f962b8-f25a-40e9-aec4-86f47e94b125)
 <br>
 
-### 7. 최단경로 탐색 알고리즘 구현(Dijkstra Algorithm)
+## 7. 최단경로 탐색 알고리즘 구현(Dijkstra Algorithm)
 ![route_map](https://github.com/user-attachments/assets/e6e2f99b-bffe-4366-9ead-5a61aec1c307)
 
 - 호선별로 각 역들을 연결, 각 호선별 환승역 끼리 연결하여 그래프 완성
@@ -227,7 +227,7 @@
 	- [[Tistory] "다익스트라(Dijkstra) 알고리즘을 Java로 구현해보자!", coding-knowjam](https://codingnojam.tistory.com/46)
 <br>
 
-### 8. 프로젝트 회고
+## 8. 프로젝트 회고
 	
 - 배운점
   - 최단경로 탐색 알고리즘 구현  
